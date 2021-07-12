@@ -1,11 +1,12 @@
 import React, { useEffect, useReducer, useState } from 'react'
+import { ContactProps } from "../interface/contact";
 import { ContactsReducer } from "../reducers/ContactsReducer";
 import { AddForm } from "./AddForm";
 import { TableContacts } from './TableContacts';
 
 const init = () => {
-    const contacts = localStorage.getItem("contactos");
-    return contacts ? JSON.parse(contacts) : [];
+    const contacts: ContactProps[] = JSON.parse(localStorage.getItem("contactos"));
+    return contacts ? contacts : [];
 }
 
 export const Contacts = () => {
