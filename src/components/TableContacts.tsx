@@ -14,6 +14,7 @@ export const TableContacts = ({ state, dispatch }) => {
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Numero</th>
+                <th>Email</th>
                 <th></th>
             </tr>
         </thead>
@@ -23,6 +24,7 @@ export const TableContacts = ({ state, dispatch }) => {
                     <td>{contact.id.split("-")[0]}</td>
                     <td>{contact.nombre}</td>
                     <td>{contact.numero}</td>
+                    <td>{contact.email}</td>
                     <td><button className="btn btn-danger" onClick={() => handleDelete(contact.id)}>Eliminar</button></td>
                 </tr>
             })}
